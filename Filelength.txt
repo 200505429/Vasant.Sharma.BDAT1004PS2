@@ -1,0 +1,11 @@
+def fileLength(file_name):
+try:
+    file = open(file_name)
+except OSError:
+    print "Could not open/read file:", fname
+    sys.exit()
+
+with file :
+    contents = file.read()
+    file.close()
+    print(len(contents))
